@@ -1,0 +1,27 @@
+[Desktop Entry]
+Name=Lavanda-Dark
+Comment=Lavanda-Dark theme for plasma
+X-KDE-PluginInfo-Author=Vince Liuice
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Email=vinceliuice@hotmail.com
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-License=LGPL
+X-KDE-PluginInfo-Name=Lavanda-Dark
+X-KDE-PluginInfo-Version=5.78.1
+X-KDE-PluginInfo-Website=https://plasma.kde.org
+X-Plasma-API=5.0
+
+[AdaptiveTransparency]
+enabled=true
+
+[ContrastEffect]
+contrast=0.2
+enabled=false
+intensity=1.4
+saturation=10
+
+[Wallpaper]
+defaultWallpaperTheme=Lavanda-Dark
+defaultFileSuffix=.png
+defaultHeight=3840
+defaultWidth=3840
