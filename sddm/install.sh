@@ -39,8 +39,9 @@ prompt () {
 
 install() {
   prompt -i "\n * Install ${name} in ${THEME_DIR}... "
-  rm -rf "${THEME_DIR}/${name}"
-  cp -r "${REO_DIR}/${name}" "${THEME_DIR}/${name}"
+  rm -rf "${THEME_DIR}/${name}" "${THEME_DIR}/${name}-Sea"
+  cp -rf "${REO_DIR}/${name}" "${THEME_DIR}"
+  cp -rf "${REO_DIR}/${name}-Sea" "${THEME_DIR}"
   # Success message
   prompt -s "\n * All done!"
 }

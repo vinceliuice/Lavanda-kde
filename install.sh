@@ -25,6 +25,7 @@ THEME_NAME=Lavanda
 LATTE_DIR="$HOME/.config/latte"
 
 COLOR_VARIANTS=('-Light' '-Dark')
+THEME_VARIANTS=('' '-Sea')
 
 cp -rf "${SRC_DIR}"/configs/Xresources "$HOME"/.Xresources
 
@@ -37,17 +38,19 @@ mkdir -p                                                                        
 
 install() {
   local name=${1}
-  local color=${2}
+  local theme=${2}
+  local color=${3}
 
   [[ ${color} == '-Dark' ]] && local ELSE_COLOR='Dark'
   [[ ${color} == '-Light' ]] && local ELSE_COLOR='Light'
+  [[ ${theme} == '-Sea' ]] && local ELSE_THEME='Sea'
 
-  local AURORAE_THEME="${AURORAE_DIR}/${name}${color}"
-  local PLASMA_THEME="${PLASMA_DIR}/${name}${color}"
-  local LOOKFEEL_THEME="${LOOKFEEL_DIR}/com.github.vinceliuice.${name}${color}"
-  local SCHEMES_THEME="${SCHEMES_DIR}/${name}${ELSE_COLOR}${ELSE_THEME}.colors"
+  local AURORAE_THEME="${AURORAE_DIR}/${name}${theme}${color}"
+  local PLASMA_THEME="${PLASMA_DIR}/${name}${theme}${color}"
+  local LOOKFEEL_THEME="${LOOKFEEL_DIR}/com.github.vinceliuice.${name}${theme}${color}"
+  local SCHEMES_THEME="${SCHEMES_DIR}/${name}${ELSE_THEME}${ELSE_COLOR}.colors"
   local KVANTUM_THEME="${KVANTUM_DIR}/${name}${ELSE_THEME}"
-  local WALLPAPER_THEME="${WALLPAPER_DIR}/${name}${color}"
+  local WALLPAPER_THEME="${WALLPAPER_DIR}/${name}${theme}${color}"
   local LATTE_THEME="${LATTE_DIR}/${name}.layout.latte"
 
   [[ -d ${AURORAE_THEME} ]] && rm -rf ${AURORAE_THEME}
@@ -58,16 +61,16 @@ install() {
   [[ -d ${WALLPAPER_THEME} ]] && rm -rf ${WALLPAPER_THEME}
   [[ -f ${LATTE_THEME} ]] && rm -rf ${LATTE_THEME}
 
-  cp -r ${SRC_DIR}/aurorae/${name}${color}                                                   ${AURORAE_DIR}
-  cp -r ${SRC_DIR}/color-schemes/${name}${ELSE_COLOR}${ELSE_THEME}.colors                    ${SCHEMES_DIR}
+  cp -r ${SRC_DIR}/aurorae/${name}${theme}${color}                                           ${AURORAE_DIR}
+  cp -r ${SRC_DIR}/color-schemes/${name}${ELSE_THEME}${ELSE_COLOR}.colors                    ${SCHEMES_DIR}
   cp -r ${SRC_DIR}/Kvantum/${name}${ELSE_THEME}                                              ${KVANTUM_DIR}
-  cp -r ${SRC_DIR}/plasma/desktoptheme/${name}${color}                                       ${PLASMA_DIR}
-  cp -r ${SRC_DIR}/plasma/desktoptheme/icons                                                 ${PLASMA_THEME}
-  cp -r ${SRC_DIR}/color-schemes/${name}${ELSE_COLOR}${ELSE_THEME}.colors                    ${PLASMA_THEME}/colors
-  cp -r ${SRC_DIR}/plasma/look-and-feel/com.github.vinceliuice.${name}${color}               ${LOOKFEEL_DIR}
-  cp -r ${SRC_DIR}/wallpaper/${name}${color}                                                 ${WALLPAPER_DIR}
+  cp -r ${SRC_DIR}/plasma/desktoptheme/${name}${theme}${color}                               ${PLASMA_DIR}
+  cp -r ${SRC_DIR}/plasma/desktoptheme/icons${theme}                                         ${PLASMA_THEME}/icons
+  cp -r ${SRC_DIR}/color-schemes/${name}${ELSE_THEME}${ELSE_COLOR}.colors                    ${PLASMA_THEME}/colors
+  cp -r ${SRC_DIR}/plasma/look-and-feel/com.github.vinceliuice.${name}${theme}${color}       ${LOOKFEEL_DIR}
+  cp -r ${SRC_DIR}/wallpaper/${name}${theme}${color}                                         ${WALLPAPER_DIR}
   mkdir -p                                                                                   ${PLASMA_THEME}/wallpapers
-  cp -r ${SRC_DIR}/wallpaper/${name}${color}                                                 ${PLASMA_THEME}/wallpapers
+  cp -r ${SRC_DIR}/wallpaper/${name}${theme}${color}                                         ${PLASMA_THEME}/wallpapers
   if [[ -d ${LATTE_THEME} ]]; then
     cp -r ${SRC_DIR}/latte-dock/${name}.layout.latte                                         ${LATTE_THEME}
     cp -r ${SRC_DIR}/latte-dock/${name}_x2.layout.latte                                      ${LATTE_THEME}
@@ -76,8 +79,10 @@ install() {
 
 echo "Installing '${THEME_NAME} kde themes'..."
 
-for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
-  install "${name:-${THEME_NAME}}" "${color}"
+for theme in "${themes[@]:-${THEME_VARIANTS[@]}}"; do
+  for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
+    install "${name:-${THEME_NAME}}" "${theme}" "${color}"
+  done
 done
 
 echo "Install finished..."
