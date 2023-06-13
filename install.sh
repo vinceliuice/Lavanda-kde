@@ -58,7 +58,7 @@ install() {
   [[ -d ${LOOKFEEL_THEME} ]] && rm -rf ${LOOKFEEL_THEME}
   [[ -f ${SCHEMES_THEME} ]] && rm -rf ${SCHEMES_THEME}
   [[ -d ${KVANTUM_THEME} ]] && rm -rf ${KVANTUM_THEME}
-  [[ -d ${WALLPAPER_THEME} ]] && rm -rf ${WALLPAPER_THEME}
+  [[ -d ${WALLPAPER_THEME} ]] && rm -rf ${WALLPAPER_THEME} && rm -rf ${WALLPAPER_DIR}/${name}${theme}
   [[ -f ${LATTE_THEME} ]] && rm -rf ${LATTE_THEME}
 
   cp -r ${SRC_DIR}/aurorae/${name}${theme}${color}                                           ${AURORAE_DIR}
@@ -69,6 +69,7 @@ install() {
   cp -r ${SRC_DIR}/color-schemes/${name}${ELSE_THEME}${ELSE_COLOR}.colors                    ${PLASMA_THEME}/colors
   cp -r ${SRC_DIR}/plasma/look-and-feel/com.github.vinceliuice.${name}${theme}${color}       ${LOOKFEEL_DIR}
   cp -r ${SRC_DIR}/wallpaper/${name}${theme}${color}                                         ${WALLPAPER_DIR}
+  cp -r ${SRC_DIR}/wallpaper/${name}${theme}                                                 ${WALLPAPER_DIR}
   mkdir -p                                                                                   ${PLASMA_THEME}/wallpapers
   cp -r ${SRC_DIR}/wallpaper/${name}${theme}${color}                                         ${PLASMA_THEME}/wallpapers
   if [[ -d ${LATTE_THEME} ]]; then

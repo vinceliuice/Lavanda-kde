@@ -35,15 +35,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1000"
+     inkscape:window-width="3840"
+     inkscape:window-height="2020"
      id="namedview39"
      showgrid="false"
-     inkscape:zoom="1.3037281"
-     inkscape:cx="13.80656"
-     inkscape:cy="99.330528"
+     inkscape:zoom="7.3749998"
+     inkscape:cx="78.711866"
+     inkscape:cy="89.694917"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="64"
      inkscape:window-maximized="1"
      inkscape:current-layer="g9711"
      inkscape:pagecheckerboard="0"
@@ -57,27 +57,27 @@
      id="defs4381">
     <linearGradient
        inkscape:collect="always"
-       id="linearGradient3833">
-      <stop
-         style="stop-color:#6a58f0;stop-opacity:1;"
-         offset="0"
-         id="stop3829"
-         class="ColorScheme-ButtonHover" />
-      <stop
-         style="stop-color:#cf54d0;stop-opacity:1;"
-         offset="1"
-         id="stop3831"
-         class="ColorScheme-Highlight" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3833"
+       xlink:href="#linearGradient923"
        id="linearGradient4411"
        x1="460.25253"
        y1="89.83622"
        x2="460.25253"
        y2="81.168526"
        gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient923">
+      <stop
+         style="stop-color:#297dff;stop-opacity:1;"
+         offset="0"
+         id="stop919"
+         class="ColorScheme-ButtonHover" />
+      <stop
+         style="stop-color:#31c4b6;stop-opacity:1;"
+         offset="1"
+         id="stop921"
+         class="ColorScheme-Highlight" />
+    </linearGradient>
   </defs>
   <g
      id="g9711"
@@ -93,7 +93,7 @@
        y="75.775764" />
     <path
        d="m 460.25244,77.066947 c 4.63454,0 8.39128,3.756735 8.39128,8.391268 0,4.634533 -3.75674,8.391268 -8.39128,8.391268 -4.63453,0 -8.39127,-3.756735 -8.39127,-8.391268 0,-4.634533 3.75674,-8.391268 8.39127,-8.391268 z"
-       style="fill:#ebebed;fill-opacity:1;stroke-width:0.364837"
+       style="fill:#ebeced;fill-opacity:1;stroke-width:0.364837"
        id="path15" />
     <image
        width="9.6626816"
@@ -106,7 +106,7 @@
        y="80.520103" />
     <path
        d="m 460.98212,80.715326 -1.45927,0.182414 v 6.019823 l 1.45927,-0.182416 v -2.371446 l 1.82416,2.553865 1.45927,-0.36483 -2.00656,-2.736283 2.00656,-2.736283 -1.45927,-0.364831 -1.82416,2.553865 z m -3.56709,1.388826 -0.51662,0.516611 0.61567,1.025376 c -0.23262,0.351386 -0.39545,0.744268 -0.47954,1.157192 l -1.16003,0.290025 v 0.729674 l 1.16003,0.290025 c 0.0844,0.41274 0.24748,0.805379 0.48027,1.156499 l -0.61635,1.026106 0.51661,0.516611 1.02537,-0.615665 c 0.35145,0.232374 0.74431,0.394938 1.15722,0.47885 l 0.29002,1.160767 h 0.72968 l 0.29,-1.160037 c 0.41275,-0.0844 0.80538,-0.247474 1.15651,-0.480273 l 1.0261,0.616358 0.51662,-0.516611 -0.59784,-1.052448 -0.35486,0.08839 -0.3007,-0.421133 c -0.47688,0.689835 -1.262,1.101591 -2.10063,1.101627 -1.41046,0 -2.55387,-1.143402 -2.55387,-2.553864 6e-5,-0.986374 0.56814,-1.884532 1.45929,-2.307307 v -0.788812 c -0.25291,0.08949 -0.49388,0.209605 -0.71757,0.357701 z"
-       style="fill:url(#linearGradient4411);fill-opacity:1;stroke-width:0.364837"
+       style="fill:url(#linearGradient4411);fill-opacity:1.0;stroke-width:0.364837"
        id="path21-3" />
   </g>
 </svg>

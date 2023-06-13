@@ -58,7 +58,7 @@ Image {
                     bottom: parent.bottom
                 }
                 width: (parent.width / 6) * (stage - 1)
-                color: "#cf54d0"
+                color: "#31c4b6"
                 Behavior on width { 
                     PropertyAnimation {
                         duration: 250
