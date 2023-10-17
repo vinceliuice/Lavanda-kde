@@ -65,13 +65,19 @@ install() {
   cp -r ${SRC_DIR}/color-schemes/${name}${ELSE_THEME}${ELSE_COLOR}.colors                    ${SCHEMES_DIR}
   cp -r ${SRC_DIR}/Kvantum/${name}${ELSE_THEME}                                              ${KVANTUM_DIR}
   cp -r ${SRC_DIR}/plasma/desktoptheme/${name}${theme}${color}                               ${PLASMA_DIR}
-  cp -r ${SRC_DIR}/plasma/desktoptheme/icons${theme}                                         ${PLASMA_THEME}/icons
+  cp -r ${SRC_DIR}/plasma/desktoptheme/icons                                                 ${PLASMA_THEME}/icons
+
+  if [[ ${theme} == '-Sea' ]]; then
+    cp -r ${SRC_DIR}/plasma/desktoptheme/icons-Sea/*                                         ${PLASMA_THEME}/icons
+  fi
+
   cp -r ${SRC_DIR}/color-schemes/${name}${ELSE_THEME}${ELSE_COLOR}.colors                    ${PLASMA_THEME}/colors
   cp -r ${SRC_DIR}/plasma/look-and-feel/com.github.vinceliuice.${name}${theme}${color}       ${LOOKFEEL_DIR}
   cp -r ${SRC_DIR}/wallpaper/${name}${theme}${color}                                         ${WALLPAPER_DIR}
   cp -r ${SRC_DIR}/wallpaper/${name}${theme}                                                 ${WALLPAPER_DIR}
   mkdir -p                                                                                   ${PLASMA_THEME}/wallpapers
   cp -r ${SRC_DIR}/wallpaper/${name}${theme}${color}                                         ${PLASMA_THEME}/wallpapers
+
   if [[ -d ${LATTE_THEME} ]]; then
     cp -r ${SRC_DIR}/latte-dock/${name}.layout.latte                                         ${LATTE_THEME}
     cp -r ${SRC_DIR}/latte-dock/${name}_x2.layout.latte                                      ${LATTE_THEME}
