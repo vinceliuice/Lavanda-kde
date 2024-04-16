@@ -1,0 +1,19 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "vinceliuice@hotmail.com",
+                "Name": "Vince Liuice"
+            }
+        ],
+        "Category": "",
+        "Description": "Lavanda Light theme for kde plasma",
+        "Id": "com.github.vinceliuice.Lavanda-Light",
+        "License": "GPLv3",
+        "Name": "Lavanda-Light",
+        "Website": "https://github.com/vinceliuice/Lavanda-kde",
+        "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
+        "X-Plasma-APIVersion": "2"
+    }
+}
