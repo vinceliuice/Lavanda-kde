@@ -1,6 +1,6 @@
 [SddmGreeterTheme]
-Name=Lavanda-Sea
-Description=Lavanda Sea theme for KDE Plasma
+Name=Lavanda
+Description=Lavanda theme for KDE Plasma
 Author=VinceLiuice
 License=GPL-3.0-or-later
 Type=sddm-theme
@@ -13,3 +13,4 @@ TranslationsDirectory=translations
 Email=vinceliuice@hotmail.com
 Theme-Id=Lavanda
 Theme-API=2.0
+QtVersion=6

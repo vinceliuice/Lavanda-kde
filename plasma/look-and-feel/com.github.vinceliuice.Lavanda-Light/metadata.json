@@ -7,13 +7,28 @@
                 "Name": "Vince Liuice"
             }
         ],
-        "Category": "",
-        "Description": "Lavanda Light theme for kde plasma",
+        "Category": "Global Themes (Plasma 6)",
+        "ServiceTypes": [
+            "Plasma/LookAndFeel"
+        ],
+        "EnabledByDefault": true,
+        "Description": "Lavanda Sea Dark theme for kde plasma",
         "Id": "com.github.vinceliuice.Lavanda-Light",
         "License": "GPLv3",
         "Name": "Lavanda-Light",
-        "Website": "https://github.com/vinceliuice/Lavanda-kde",
-        "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
-        "X-Plasma-APIVersion": "2"
-    }
+        "Website": "https://github.com/vinceliuice/Lavanda-kde"
+    },
+    "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
+    "X-KDE-fallbackPackage": "org.kde.breeze.desktop",
+    "X-Plasma-MainScript": "defaults",
+    "X-Plasma-APIVersion": "2",
+    "X-KPackage-Dependencies": [
+        "kns://colorschemes.knsrc/api.kde-look.org/2009360",
+        "kns://plasma-themes.knsrc/api.kde-look.org/2009354",
+        "kns://aurorae.knsrc/api.kde-look.org/2009355",
+        "kns://wallpaper.knsrc/api.kde-look.org/2009366",
+        "kns://sddmtheme.knsrc/api.kde-look.org/2009363",
+        "kns://icons.knsrc/api.kde-look.org/1661983",
+        "kns://xcursor.knsrc/api.kde-look.org/1831077"
+    ]
 }
