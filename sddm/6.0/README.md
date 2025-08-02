@@ -1,5 +1,5 @@
 
-McMojave sddm theme for KDE Plasma desktop.
+Lavanda sddm theme for KDE Plasma desktop.
 
 ## Installation
 
