@@ -131,8 +131,8 @@ ForegroundPositive=39,174,96
 ForegroundVisited=120,120,120
 
 [General]
-ColorScheme=LavandaDark
-Name=LavandaDark
+ColorScheme=LavandaSeaDark
+Name=LavandaSeaDark
 shadeSortColumn=true
 
 [KDE]
